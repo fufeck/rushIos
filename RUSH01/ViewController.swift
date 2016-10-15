@@ -38,6 +38,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
             createItinary()
         }
     }
+
+	var route: MKRoute?
     
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
@@ -71,7 +73,11 @@ class ViewController: UIViewController, MKMapViewDelegate {
             if let vc = segue.destinationViewController as? ItinaryViewController {
                 vc.regionMap = self.mapView.region
             }
-        }
+		} else if segue.identifier == "routesSegue" {
+			if let vc = segue.destinationViewController as? RoutesViewController {
+				vc.steps = self.route?.steps
+			}
+		}
     }
     
     //TO DISPLAY ROUTE LINE
@@ -91,9 +97,8 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         // Calculate the direction
         let directions = MKDirections(request: directionRequest)
-        
-        // 8.
-        directions.calculateDirectionsWithCompletionHandler {
+
+		directions.calculateDirectionsWithCompletionHandler {
             (response, error) -> Void in
             
             guard let response = response else {
@@ -105,6 +110,23 @@ class ViewController: UIViewController, MKMapViewDelegate {
             }
             
             let route = response.routes[0]
+
+			self.route = route
+
+			for r in response.routes {
+				print(r.advisoryNotices)
+				print(r.distance)
+				print(r.expectedTravelTime)
+				print(r.name)
+
+				for s in r.steps {
+					print(s.distance)
+					print(s.instructions)
+					print(s.notice)
+				}
+
+			}
+
             self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
             
             let rect = route.polyline.boundingMapRect
@@ -117,6 +139,13 @@ class ViewController: UIViewController, MKMapViewDelegate {
         return
     }
     
+	@IBAction func stepsAction(sender: UIButton) {
+
+		if route != nil {
+			performSegueWithIdentifier("routesSegue", sender: self)
+		}
+
+	}
     
     override func viewDidLoad() {
         super.viewDidLoad()

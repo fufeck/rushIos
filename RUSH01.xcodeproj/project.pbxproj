@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38BFB8A81DB24AB8000C3857 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8A71DB24AB8000C3857 /* RoutesViewController.swift */; };
+		38BFB8AA1DB24ED7000C3857 /* StepTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFB8A91DB24ED7000C3857 /* StepTableViewCell.swift */; };
 		CD0212001DB0DED100B1BC4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0211FF1DB0DED100B1BC4B /* AppDelegate.swift */; };
 		CD0212021DB0DED100B1BC4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD0212011DB0DED100B1BC4B /* ViewController.swift */; };
 		CD0212051DB0DED100B1BC4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0212031DB0DED100B1BC4B /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38BFB8A71DB24AB8000C3857 /* RoutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
+		38BFB8A91DB24ED7000C3857 /* StepTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepTableViewCell.swift; sourceTree = "<group>"; };
 		CD0211FC1DB0DED100B1BC4B /* RUSH01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RUSH01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0211FF1DB0DED100B1BC4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD0212011DB0DED100B1BC4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				CD0212161DB1224A00B1BC4B /* ItinaryViewController.swift */,
 				CDAB14491DB130D100A0666C /* DestinationViewController.swift */,
 				CD0212031DB0DED100B1BC4B /* Main.storyboard */,
+				38BFB8A71DB24AB8000C3857 /* RoutesViewController.swift */,
+				38BFB8A91DB24ED7000C3857 /* StepTableViewCell.swift */,
 				CD0212091DB0DED100B1BC4B /* Assets.xcassets */,
 				CD02120B1DB0DED100B1BC4B /* LaunchScreen.storyboard */,
 				CD02120E1DB0DED100B1BC4B /* Info.plist */,
@@ -148,11 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD0212151DB0F09C00B1BC4B /* ResultTableViewController.swift in Sources */,
+				38BFB8AA1DB24ED7000C3857 /* StepTableViewCell.swift in Sources */,
 				CDAB144A1DB130D100A0666C /* DestinationViewController.swift in Sources */,
 				CD0212171DB1224A00B1BC4B /* ItinaryViewController.swift in Sources */,
 				CD0212021DB0DED100B1BC4B /* ViewController.swift in Sources */,
 				CD0212081DB0DED100B1BC4B /* RUSH01.xcdatamodeld in Sources */,
 				CD0212001DB0DED100B1BC4B /* AppDelegate.swift in Sources */,
+				38BFB8A81DB24AB8000C3857 /* RoutesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
